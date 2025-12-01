@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Alessio Costantini – Brand and Web Designer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page portfolio nero e oro con grafica elegante e scia di stelle dorate sul cursore.">
+    <style>
+        :root {
+            --bg-dark: #050507;
+            --bg-dark-soft: #0b0b10;
+            --gold: #d4af37;
+            --gold-soft: #f3d88b;
+            --text-light: #f5f5f5;
+            --text-muted: #bbbbbb;
+            --border-soft: rgba(212, 175, 55, 0.25);
+            --accent: #ffcc4d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            /* immagine di sfondo personalizzata */
+            background-image: url(img/sfondo.webp);
+            background-size: cover;          /* riempie lo schermo */
+            background-repeat: no-repeat;    /* niente ripetizione */
+            background-position: center;     /* centrata */
+            background-attachment: fixed;    /* leggero effetto parallax */
+            color: var(--text-light);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Layout generale */
+        .page-wrapper {
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0 32px 40px;
+        }
+
+        /* HEADER / NAVBAR */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: linear-gradient(to bottom, rgba(5,5,7,0.6), rgba(5,5,7,0));
+            backdrop-filter: blur(12px);
+            border-bottom: none;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-mark {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-mark img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;     /* mantiene le proporzioni */
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .logo-text span:first-child {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: var(--gold-soft);
+        }
+
+        .logo-text span:last-child {
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--text-muted);
+            padding-bottom: 4px;
+            border-bottom: 1px solid transparent;
+            transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-soft);
+            border-color: var(--gold-soft);
+            transform: translateY(-1px);
+        }
+
+        .nav-cta {
+            padding: 12px 22px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            border-radius: 999px;
+            border: 1px solid var(--gold);
+            color: var(--gold-soft);
+            background: radial-gradient(circle at top left, rgba(243,216,139,0.18), transparent 60%);
+            cursor: pointer;
+            transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            background: radial-gradient(circle at top left, rgba(243,216,139,0.34), transparent 65%);
+            box-shadow: 0 0 12px rgba(212,175,55,0.35);
+            transform: translateY(-1px);
+        }
+
+        .nav-toggle {
+            display: none;
+            width: 28px;
+            height: 20px;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            height: 2px;
+            width: 100%;
+            background: var(--gold-soft);
+            border-radius: 999px;
+        }
+
+        @media (max-width: 768px) {
+            .page-wrapper {
+                padding: 0 20px 32px;
+            }
+
+            .nav {
+                padding: 14px 0;
+            }
+
+            .nav-links {
+                position: fixed;
+                inset: 64px 16px auto 16px;
+                flex-direction: column;
+                background: rgba(5, 5, 7, 0.97);
+                padding: 20px;
+                border-radius: 14px;
+                border: 1px solid var(--border-soft);
+                box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+                transform: translateY(-20px);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.2s ease, transform 0.2s ease;
+            }
+
+            .nav-links.open {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+                padding: 8px 0;
+            }
+
+            .nav-cta {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+        }
+
+        /* HERO */
+        /* aggiungo padding-top per compensare la navbar fixed */
+        main.page-wrapper {
+            padding-top: 110px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+            gap: 48px;
+            padding: 90px 0 72px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(243,216,139,0.35);
+            background: radial-gradient(circle at left, rgba(243,216,139,0.2), transparent 55%);
+            font-size: 20px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gold-soft);
+            margin-bottom: 20px;
+        }
+
+        .hero-badge-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold-soft);
+            box-shadow: 0 0 10px rgba(243,216,139,0.9);
+        }
+
+        .hero-title {
+            font-size: clamp(42px, 5vw, 64px);
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero-title span {
+            color: var(--gold-soft);
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            color: var(--text-muted);
+            max-width: 560px;
+            margin-bottom: 26px;
+        }
+
+        .hero-highlight {
+            font-size: 20px;
+            color: var(--gold-soft);
+            margin-bottom: 6px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            font-size: 20px;
+            color: var(--text-muted);
+            margin-bottom: 26px;
+        }
+
+        .hero-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--gold-soft);
+        }
+
+        .hero-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn-primary {
+            padding: 10px 22px;
+            border-radius: 999px;
+            border: 1px solid var(--gold);
+            background: linear-gradient(135deg, #222 0, #050507 50%, #181006 100%);
+            color: var(--gold-soft);
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+            border-color: var(--gold-soft);
+        }
+
+        .btn-ghost {
+            padding: 10px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.18);
+            color: var(--text-muted);
+            font-size: 13px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            background: rgba(5,5,7,0.7);
+            cursor: pointer;
+            text-decoration: none;
+            transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+        }
+
+        .btn-ghost:hover {
+            border-color: rgba(243,216,139,0.7);
+            color: var(--gold-soft);
+            background: rgba(22,18,10,0.9);
+        }
+
+        .hero-right {
+            border-radius: 18px;
+            border: 1px solid var(--border-soft);
+            background: radial-gradient(circle at top, rgba(243,216,139,0.16), rgba(5,5,7,0.98));
+            padding: 20px 18px 18px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-right-label {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--gold-soft);
+            margin-bottom: 10px;
+        }
+
+        .hero-card {
+            border-radius: 14px;
+            border: 1px solid rgba(243,216,139,0.35);
+            background: rgba(5,5,7,0.96);
+            padding: 16px 14px;
+        }
+
+        .hero-card-title {
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            margin-bottom: 4px;
+        }
+
+        .hero-card-sub {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+
+        .hero-card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .pill {
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 18px;
+            border: 1px solid rgba(243,216,139,0.34);
+            color: var(--gold-soft);
+            background: radial-gradient(circle at top, rgba(243,216,139,0.16), transparent 55%);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            color: var(--text-muted);
+        }
+
+        .hero-ornament {
+            position: absolute;
+            inset: auto -40px -40px auto;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 1px solid rgba(243,216,139,0.35);
+            opacity: 0.35;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 32px 0 48px;
+                gap: 32px;
+            }
+
+            .hero-badge {
+                font-size: 12px;
+            }
+
+            .hero-highlight {
+                font-size: 13px;
+            }
+
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .hero-subtitle {
+                font-size: 15px;
+            }
+
+            .hero-meta {
+                font-size: 12px;
+                gap: 10px;
+            }
+
+            .hero-cta-row {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .btn-primary,
+            .btn-ghost {
+                width: 100%;
+                justify-content: center;
+                font-size: 14px;
+                padding: 12px 18px;
+            }
+
+            .hero-right-label {
+                font-size: 13px;
+            }
+
+            .hero-card-title {
+                font-size: 14px;
+            }
+
+            .hero-card-sub {
+                font-size: 13px;
+            }
+
+            .pill {
+                font-size: 12px;
+                padding: 6px 8px;
+            }
+
+            .hero-card-footer {
+                font-size: 11px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+        }
+
+        /* SEZIONI GENERICHE */
+        section {
+            padding: 36px 0;
+        }
+
+        .section-header {
+            margin-bottom: 18px;
+        }
+
+        .section-kicker {
+            font-size: 18px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold-soft);
+            margin-bottom: 4px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 6px;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: var(--text-muted);
+            max-width: 560px;
+        }
+
+        /* ABOUT */
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+            gap: 28px;
+        }
+
+        .about-text {
+            font-size: 20px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .about-side {
+            border-radius: 16px;
+            border: 1px solid var(--border-soft);
+            background: radial-gradient(circle at top, rgba(243,216,139,0.12), rgba(5,5,7,0.96));
+            padding: 14px 16px;
+            font-size: 20px;
+        }
+
+        .about-list {
+            margin-top: 8px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+            gap: 8px;
+        }
+
+        .tag {
+            font-size: 18px;
+            color: var(--gold-soft);
+        }
+
+        @media (max-width: 900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* SERVIZI */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 18px;
+            margin-top: 16px;
+        }
+
+        .card {
+            border-radius: 16px;
+            border: 1px solid var(--border-soft);
+            background: rgba(5,5,7,0.96);
+            padding: 14px 14px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            color: var(--gold-soft);
+        }
+
+        .card-price {
+            font-size: 20px;
+            color: var(--gold-soft);
+        }
+
+        .card-text {
+            font-size: 20px;
+            color: var(--text-muted);
+        }
+
+        .card-list {
+            list-style: none;
+            margin-top: 4px;
+        }
+
+        .card-list li {
+            font-size: 20px;
+            color: var(--text-light);
+            margin-bottom: 3px;
+        }
+
+        @media (max-width: 900px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* PORTFOLIO */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .portfolio-item {
+            border-radius: 14px;
+            border: 1px solid var(--border-soft);
+            background: linear-gradient(135deg, rgba(19,14,8,0.95), rgba(5,5,7,0.98));
+            padding: 12px 12px 14px;
+        }
+
+        .portfolio-label {
+            font-size: 18px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gold-soft);
+            margin-bottom: 4px;
+        }
+
+        .portfolio-title {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .portfolio-text {
+            font-size: 20px;
+            color: var(--text-muted);
+        }
+
+        .portfolio-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-top: 8px;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 900px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* CONTATTI */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(0,2.2fr) minmax(0,2.8fr);
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        .contact-info p {
+            font-size: 20px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .contact-info strong {
+            color: var(--gold-soft);
+        }
+
+        .contact-form {
+            border-radius: 16px;
+            border: 1px solid var(--border-soft);
+            background: rgba(5,5,7,0.96);
+            padding: 16px 16px 18px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+            gap: 10px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-size: 20px;
+            color: var(--text-muted);
+        }
+
+        input, textarea {
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.16);
+            background: rgba(5,5,7,0.95);
+            color: var(--text-light);
+            padding: 8px 12px;
+            font-size: 13px;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        textarea {
+            border-radius: 12px;
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        input:focus, textarea:focus {
+            border-color: rgba(243,216,139,0.7);
+            box-shadow: 0 0 0 1px rgba(243,216,139,0.5);
+        }
+
+        .contact-submit {
+            margin-top: 8px;
+        }
+
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 16px;
+            margin-top: 24px;
+            font-size: 11px;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        footer span strong {
+            color: var(--gold-soft);
+        }
+
+        /* ✨ SCIA DI STELLE DORATE SUL CURSORE */
+        .star {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            pointer-events: none;
+            background: radial-gradient(circle, var(--gold-soft) 0, rgba(243,216,139,0.4) 40%, transparent 70%);
+            box-shadow: 0 0 12px rgba(243,216,139,0.8);
+            animation: starTrail 0.7s ease-out forwards;
+            z-index: 9999;
+        }
+
+        @keyframes starTrail {
+            0% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translate3d(0, -14px, 0) scale(0.3);
+            }
+        }
+
+        /* TYPO MOBILE GENERALE */
+        @media (max-width: 768px) {
+            .section-kicker {
+                font-size: 11px;
+            }
+
+            .section-title {
+                font-size: 20px;
+            }
+
+            .section-subtitle {
+                font-size: 14px;
+            }
+
+            .about-text,
+            .about-side,
+            .tag,
+            .card-title,
+            .card-price,
+            .card-text,
+            .card-list li,
+            .portfolio-label,
+            .portfolio-title,
+            .portfolio-text,
+            .contact-info p,
+            label {
+                font-size: 14px;
+            }
+
+            input,
+            textarea {
+                font-size: 14px;
+            }
+
+            footer {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="page-wrapper">
+            <nav class="nav">
+                <div class="logo">
+                    <div class="logo-mark">
+                        <img src="img/logo.webp" alt="Graphix Alex Logo">
+                    </div>
+                    <div class="logo-text">
+                        <span>GRAPHIX ALEX</span>
+                        <span>Brand and Web Designer</span>
+                    </div>
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="#about">Chi sono</a>
+                    <a href="#services">Servizi</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contatti</a>
+                    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+                        Richiedi un progetto
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-wrapper">
+        <!-- HERO -->
+        <section class="hero" id="top">
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    <span>Portfolio • Ticino</span>
+                </div>
+
+                <div class="hero-highlight">Brand, siti web e identità eleganti</div>
+                <h1 class="hero-title">
+                    Creo <span>immagini e siti</span> che fanno sembrare il tuo brand più grande, pulito e professionale.
+                </h1>
+                <p class="hero-subtitle">
+                    Progetto loghi, brand identity e siti web responsive per attività locali, professionisti e brand di nicchia che vogliono un’immagine moderna, ordinata e di impatto.
+                </p>
+
+                <div class="hero-meta">
+                    <span><span class="dot"></span> Basato in Lugano – Paradiso</span>
+                    <span><span class="dot"></span> Brand and Web Design</span>
+                    <span><span class="dot"></span> Focus su attività emergenti</span>
+                </div>
+
+                <div class="hero-cta-row">
+                    <a href="#contact" class="btn-primary">
+                        Iniziamo un progetto
+                        <span>→</span>
+                    </a>
+                    <a href="#portfolio" class="btn-ghost">
+                        Guarda i lavori
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="hero-right-label">Panoramica</div>
+                <div class="hero-card">
+<div class="hero-card-title">Cosa faccio</div>
+<div class="hero-card-sub">
+    Progetto identità visive, siti web, materiali grafici e contenuti professionali
+    per dare forma e coerenza al tuo brand, online e offline.
+</div>
+
+<div class="hero-card-grid">
+
+    <div class="pill">Brand Identity</div>
+    <div class="pill">Logo design</div>
+
+    <div class="pill">Siti web professionali</div>
+    <div class="pill">Landing page</div>
+
+    <div class="pill">Brochure e PDF</div>
+    <div class="pill">Presentazioni</div>
+
+    <div class="pill">Materiali per corsi</div>
+    <div class="pill">Interfacce UX/UI</div>
+
+</div>
+
+<div class="hero-card-footer">
+    <span>Stile: pulito, moderno, professionale.</span>
+    <span>Progetti Luxury • Ticino</span>
+</div>                </div>
+                <div class="hero-ornament"></div>
+            </div>
+        </section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="section-header">
+        <div class="section-kicker">Chi sono</div>
+        <h2 class="section-title">Un creativo che unisce grafica, web e strategia.</h2>
+        <p class="section-subtitle">
+            Lavoro sulla comunicazione visiva di brand e attività che vogliono un’immagine pulita, coerente e professionale, online e offline.
+        </p>
+    </div>
+
+    <div class="about-grid">
+        <div class="about-text">
+            <p>
+                Sono Alessio Costantini, grafico e <strong>operatore grafico informatico diplomato</strong> con valutazione
+                <strong>29/30</strong>. Da anni mi occupo di identità visiva, pubblicità e web design, aiutando attività locali,
+                professionisti e piccoli brand a presentarsi in modo chiaro, ordinato e credibile.
+            </p>
+            <br>
+            <p>
+                La mia esperienza nasce dalla pratica: ho progettato loghi, layout, materiali promozionali, landing page,
+                siti vetrina e documenti professionali per corsi, eventi e piattaforme digitali. Ogni progetto è pensato
+                per essere bello da vedere ma soprattutto funzionale, leggibile e facile da usare per chi lo guarda.
+            </p>
+            <br>
+            <p>
+                Quando lavoro su un brand parto sempre dagli obiettivi: cosa vuoi comunicare, a chi ti rivolgi e che impressione
+                vuoi lasciare. Da lì costruisco un sistema visivo coerente – colori, tipografia, griglie, immagini e tono grafico –
+                che si possa applicare in modo uniforme su logo, sito web, social, brochure, slide e materiali stampati.
+            </p>
+            <br>
+            <p>
+                Il mio focus è togliere confusione e dare struttura: meno caos grafico, più chiarezza. Preferisco progetti seguiti
+                con attenzione, in cui posso curare i dettagli e creare un’immagine che duri nel tempo e che ti rappresenti davvero.
+            </p>
+        </div>
+<div class="about-side">
+    <div>Ambiti principali:</div>
+
+    <div class="about-list">
+
+        <div class="tag">Branding e identità visiva</div>
+        <div class="tag">Logo design e monogrammi</div>
+
+        <div class="tag">Siti web professionali</div>
+        <div class="tag">Landing page ad alta conversione</div>
+
+        <div class="tag">Materiali promozionali</div>
+        <div class="tag">Brochure, PDF e presentazioni</div>
+
+        <div class="tag">Scuole e corsi professionali</div>
+        <div class="tag">Manuali e materiali didattici</div>
+
+        <div class="tag">Piattaforme educative online</div>
+        <div class="tag">Interfacce e UX/UI</div>
+
+        <div class="tag">Brand e attività locali</div>
+        <div class="tag">Startup digitali e personal brand</div>
+
+    </div>
+</div>    </div>
+</section>
+
+        <!-- SERVIZI -->
+        <section id="services">
+
+            <div class="section-header">
+                <div class="section-kicker">Servizi</div>
+                <h2 class="section-title">Cosa posso creare per la tua attività.</h2>
+                <p class="section-subtitle">
+                    Pacchetti chiari e su misura per chi vuole un’immagine curata, senza perdersi nei tecnicismi.
+                </p>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-title">Brand Starter</div>
+                    <div class="card-price">da 600 – 900 CHF</div>
+                    <div class="card-text">Per chi ha bisogno di un’identità visiva pulita e professionale.</div>
+                    <ul class="card-list">
+                        <li>Logo principale</li>
+                        <li>Palette colori e font</li>
+                        <li>Linee guida essenziali del brand</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Sito Web Professionale</div>
+                    <div class="card-price">da 1’200 – 2’500 CHF</div>
+                    <div class="card-text">Per negozi, professionisti e attività locali.</div>
+                    <ul class="card-list">
+                        <li>Sito da 4–6 pagine, responsive</li>
+                        <li>Struttura chiara e leggibile</li>
+                        <li>Form contatti / WhatsApp</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Rebranding e Materiali</div>
+                    <div class="card-price">da 1’000 CHF in su</div>
+                    <div class="card-text">Per chi vuole aggiornare, ordinare e migliorare tutto.</div>
+                    <ul class="card-list">
+                        <li>Restyling logo e immagine</li>
+                        <li>PDF, brochure e documenti professionali</li>
+                        <li>Supporto grafico per corsi e presentazioni</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio">
+            <div class="section-header">
+                <div class="section-kicker">Portfolio</div>
+                <h2 class="section-title">Alcuni progetti reali che ho seguito.</h2>
+                <p class="section-subtitle">
+                    Ogni progetto nasce da una storia diversa: un salone, una scuola, una piattaforma digitale o un brand personale.
+                </p>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Brand e Web</div>
+                    <div class="portfolio-title">Cecilia Luxury Grooming</div>
+                    <p class="portfolio-text">
+                        Logo, identità visiva, sito web, pagine scuola e cosmetica, PDF per corsi e materiali.
+                    </p>
+                    <img src="img/locandina.jpg" width="320" height="223" alt=""/>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-label">UX/UI e Piattaforma</div>
+                    <div class="portfolio-title">Bitcoin Master</div>
+                    <p class="portfolio-text">
+                        Struttura, interfaccia, area utente, pagina admin, chat AI e certificato finale in PDF.
+                    </p>
+                    <img src="img/LOGO-BITCOIN-MASTER-APP-con-sito.png" width="270" height="266" alt=""/>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Brand e Packaging</div>
+                    <div class="portfolio-title">MAC / Fidelis Parfums</div>
+                    <p class="portfolio-text">
+                        Concept visivo, monogrammi, etichette, packaging e presentazione della linea di fragranze.
+                    </p>
+                    <img src="img/macc.png" width="270" height="268" alt=""/>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATTI -->
+        <section id="contact">
+            <div class="section-header">
+                <div class="section-kicker">Contatti</div>
+                <h2 class="section-title">Parliamo del tuo progetto.</h2>
+            <p class="section-subtitle">
+                    Scrivimi cosa ti serve: un nuovo brand, un sito web, un restyling o semplicemente un consiglio.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p><strong>Nome:</strong> Alessio Costantini</p>
+                    <p><strong>Email:</strong> alessiocostantini.design@gmail.com</p>
+                    <p><strong>Zona:</strong> Lugano – Paradiso, Ticino</p>
+                    <br>
+                    <p>
+                        Preferisco lavorare in modo chiaro: poche chiacchiere, molte cose pratiche.
+                        Raccontami chi sei, che tipo di attività hai e cosa ti aspetti dal progetto.
+                    </p>
+                </div>
+
+                <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('Qui potrai collegare l’invio del form alla tua mail o a un backend.');">
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="name">Nome e cognome</label>
+                                <input id="name" type="text" placeholder="Es. Marco Rossi">
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input id="email" type="email" placeholder="nome@dominio.ch">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="project">Tipo di progetto</label>
+                            <input id="project" type="text" placeholder="Es. nuovo sito, logo, rebranding...">
+                        </div>
+                        <div class="field">
+                            <label for="message">Messaggio</label>
+                            <textarea id="message" placeholder="Raccontami in poche righe la tua idea o la situazione attuale."></textarea>
+                        </div>
+                        <div class="contact-submit">
+                            <button type="submit" class="btn-primary">Invia richiesta</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <span>© <strong>Alessio Costantini</strong> – Brand and Web Design · Ticino 2025&copy;</span>
+        </footer>
+    </main>
+
+    <script>
+        // Toggle menu mobile
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        // Chiudi il menu quando clicchi un link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+            });
+        });
+
+        // ✨ Scia di stelle dorate che segue il cursore
+        let lastStarTime = 0;
+        document.addEventListener('mousemove', (e) => {
+            const now = performance.now();
+            // Limita la quantità di stelle per non esplodere il DOM
+            if (now - lastStarTime < 30) return;
+            lastStarTime = now;
+
+            const star = document.createElement('div');
+            star.className = 'star';
+
+            // Posizione vicino al cursore
+            const offsetX = (Math.random() - 0.5) * 16;
+            const offsetY = (Math.random() - 0.5) * 16;
+            star.style.left = (e.clientX + offsetX) + 'px';
+            star.style.top = (e.clientY + offsetY) + 'px';
+
+            // Leggera variazione nella dimensione
+            const size = 6 + Math.random() * 6;
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+
+            document.body.appendChild(star);
+
+            // Rimuovi l’elemento dopo l’animazione
+            setTimeout(() => {
+                star.remove();
+            }, 700);
+        });
+    </script>
+</body>
+</html>
