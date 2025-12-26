@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<head>
     <meta charset="UTF-8">
     <title>Graphix Alex – Brand Identity & Web Designer in Ticino</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 🌍 META DESCRIPTION (3 lingue) -->
     <meta name="description" lang="it" content="Graphix Alex – Grafico e Web Designer in Ticino. Creo brand identity eleganti, siti web moderni e materiali grafici professionali per attività locali, corsi e brand digitali.">
     <meta name="description" lang="en" content="Graphix Alex – Brand Identity and Web Designer based in Ticino. I create elegant visual identities, modern websites and professional graphic materials for local businesses, courses and digital brands.">
     <meta name="description" lang="de" content="Graphix Alex – Grafik- und Webdesigner im Tessin. Ich kreiere elegante Markenidentitäten, moderne Websites und professionelle Grafiken für lokale Unternehmen, Kurse und digitale Marken.">
 
-    <!-- 🧩 KEYWORDS -->
     <meta name="keywords" content="grafico ticino, web designer lugano, brand identity ticino, logo design svizzera, siti web professionali, grafica pubblicitaria, designer lugano, brand design, landing page, portfolio designer, graphix alex">
-
-    <!-- 📱 MOBILE COLOR -->
     <meta name="theme-color" content="#050507">
 
-    <!-- 🖼 OPEN GRAPH (Facebook, Instagram, WhatsApp) -->
     <meta property="og:title" content="Graphix Alex – Brand & Web Designer">
     <meta property="og:description" content="Brand identity eleganti, siti web moderni e design professionale per attività locali, professionisti e brand digitali.">
     <meta property="og:image" content="https://graphixalex.github.io/graphixalex/logo.webp">
@@ -25,16 +19,13 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="it_CH">
 
-    <!-- 🐦 TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Graphix Alex – Brand & Web Designer">
     <meta name="twitter:description" content="Identità visive, siti web e grafica professionale in Ticino.">
     <meta name="twitter:image" content="https://graphixalex.github.io/graphixalex/logo.webp">
 
-    <!-- 🔖 FAVICON -->
     <link rel="icon" type="image/png" href="logo.webp">
 
-    <!-- 📚 SCHEMA.ORG – Dati strutturati SEO (Designer Professionista) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -56,12 +47,9 @@
     }
     </script>
 
-    <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <!-- META GENERALE -->
     <meta name="author" content="Graphix Alex">
-</head>
+
     <style>
         :root {
             --bg-dark: #050507;
@@ -86,26 +74,23 @@
 
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            /* immagine di sfondo personalizzata */
             background-image: url(sfondo.webp);
-            background-size: cover;          /* riempie lo schermo */
-            background-repeat: no-repeat;    /* niente ripetizione */
-            background-position: center;     /* centrata */
-            background-attachment: fixed;    /* leggero effetto parallax */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
             color: var(--text-light);
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
         }
 
-        /* Layout generale */
         .page-wrapper {
             max-width: 1920px;
             margin: 0 auto;
             padding: 0 32px 40px;
         }
 
-        /* HEADER / NAVBAR */
         header {
             position: fixed;
             top: 0;
@@ -141,7 +126,7 @@
         .logo-mark img {
             width: 100%;
             height: 100%;
-            object-fit: contain;     /* mantiene le proporzioni */
+            object-fit: contain;
         }
 
         .logo-text {
@@ -182,25 +167,6 @@
         .nav-links a:hover {
             color: var(--gold-soft);
             border-color: var(--gold-soft);
-            transform: translateY(-1px);
-        }
-
-        .nav-cta {
-            padding: 12px 22px;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            border-radius: 999px;
-            border: 1px solid var(--gold);
-            color: var(--gold-soft);
-            background: radial-gradient(circle at top left, rgba(243,216,139,0.18), transparent 60%);
-            cursor: pointer;
-            transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-        }
-
-        .nav-cta:hover {
-            background: radial-gradient(circle at top left, rgba(243,216,139,0.34), transparent 65%);
-            box-shadow: 0 0 12px rgba(212,175,55,0.35);
             transform: translateY(-1px);
         }
 
@@ -255,18 +221,11 @@
                 padding: 8px 0;
             }
 
-            .nav-cta {
-                width: 100%;
-                text-align: center;
-            }
-
             .nav-toggle {
                 display: flex;
             }
         }
 
-        /* HERO */
-        /* aggiungo padding-top per compensare la navbar fixed */
         main.page-wrapper {
             padding-top: 110px;
         }
@@ -545,7 +504,6 @@
             }
         }
 
-        /* SEZIONI GENERICHE */
         section {
             padding: 36px 0;
         }
@@ -573,7 +531,6 @@
             max-width: 560px;
         }
 
-        /* ABOUT */
         .about-grid {
             display: grid;
             grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
@@ -616,7 +573,6 @@
             }
         }
 
-        /* SERVIZI */
         .cards {
             display: grid;
             grid-template-columns: repeat(3, minmax(0,1fr));
@@ -666,7 +622,6 @@
             }
         }
 
-        /* PORTFOLIO */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0,1fr));
@@ -713,86 +668,6 @@
             }
         }
 
-        /* CONTATTI */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: minmax(0,2.2fr) minmax(0,2.8fr);
-            gap: 24px;
-            align-items: flex-start;
-        }
-
-        .contact-info p {
-            font-size: 20px;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-        }
-
-        .contact-info strong {
-            color: var(--gold-soft);
-        }
-
-        .contact-form {
-            border-radius: 16px;
-            border: 1px solid var(--border-soft);
-            background: rgba(5,5,7,0.96);
-            padding: 16px 16px 18px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0,1fr));
-            gap: 10px;
-        }
-
-        .field {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-bottom: 10px;
-        }
-
-        label {
-            font-size: 20px;
-            color: var(--text-muted);
-        }
-
-        input, textarea {
-            border-radius: 999px;
-            border: 1px solid rgba(255,255,255,0.16);
-            background: rgba(5,5,7,0.95);
-            color: var(--text-light);
-            padding: 8px 12px;
-            font-size: 13px;
-            outline: none;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        textarea {
-            border-radius: 12px;
-            min-height: 90px;
-            resize: vertical;
-        }
-
-        input:focus, textarea:focus {
-            border-color: rgba(243,216,139,0.7);
-            box-shadow: 0 0 0 1px rgba(243,216,139,0.5);
-        }
-
-        .contact-submit {
-            margin-top: 8px;
-        }
-
-        @media (max-width: 900px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* FOOTER */
         footer {
             border-top: 1px solid rgba(255,255,255,0.06);
             padding-top: 16px;
@@ -809,7 +684,6 @@
             color: var(--gold-soft);
         }
 
-        /* ✨ SCIA DI STELLE DORATE SUL CURSORE */
         .star {
             position: fixed;
             width: 8px;
@@ -833,7 +707,6 @@
             }
         }
 
-        /* TYPO MOBILE GENERALE */
         @media (max-width: 768px) {
             .section-kicker {
                 font-size: 11px;
@@ -856,14 +729,7 @@
             .card-list li,
             .portfolio-label,
             .portfolio-title,
-            .portfolio-text,
-            .contact-info p,
-            label {
-                font-size: 14px;
-            }
-
-            input,
-            textarea {
+            .portfolio-text {
                 font-size: 14px;
             }
 
@@ -893,17 +759,12 @@
                     <a href="#about">Chi sono</a>
                     <a href="#services">Servizi</a>
                     <a href="#portfolio">Portfolio</a>
-                    <a href="#contact">Contatti</a>
-                    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
-                        Richiedi un progetto
-                    </button>
                 </div>
             </nav>
         </div>
     </header>
 
     <main class="page-wrapper">
-        <!-- HERO -->
         <section class="hero" id="top">
             <div class="hero-left">
                 <div class="hero-badge">
@@ -926,12 +787,12 @@
                 </div>
 
                 <div class="hero-cta-row">
-                    <a href="#contact" class="btn-primary">
-                        Iniziamo un progetto
+                    <a href="#portfolio" class="btn-primary">
+                        Guarda i lavori
                         <span>→</span>
                     </a>
                     <a href="#portfolio" class="btn-ghost">
-                        Guarda i lavori
+                        Scorri il portfolio
                     </a>
                 </div>
             </div>
@@ -939,101 +800,96 @@
             <div class="hero-right">
                 <div class="hero-right-label">Panoramica</div>
                 <div class="hero-card">
-<div class="hero-card-title">Cosa faccio</div>
-<div class="hero-card-sub">
-    Progetto identità visive, siti web, materiali grafici e contenuti professionali
-    per dare forma e coerenza al tuo brand, online e offline.
-</div>
+                    <div class="hero-card-title">Cosa faccio</div>
+                    <div class="hero-card-sub">
+                        Progetto identità visive, siti web, materiali grafici e contenuti professionali
+                        per dare forma e coerenza al tuo brand, online e offline.
+                    </div>
 
-<div class="hero-card-grid">
+                    <div class="hero-card-grid">
+                        <div class="pill">Brand Identity</div>
+                        <div class="pill">Logo design</div>
 
-    <div class="pill">Brand Identity</div>
-    <div class="pill">Logo design</div>
+                        <div class="pill">Siti web professionali</div>
+                        <div class="pill">Landing page</div>
 
-    <div class="pill">Siti web professionali</div>
-    <div class="pill">Landing page</div>
+                        <div class="pill">Brochure e PDF</div>
+                        <div class="pill">Presentazioni</div>
 
-    <div class="pill">Brochure e PDF</div>
-    <div class="pill">Presentazioni</div>
+                        <div class="pill">Materiali per corsi</div>
+                        <div class="pill">Interfacce UX/UI</div>
+                    </div>
 
-    <div class="pill">Materiali per corsi</div>
-    <div class="pill">Interfacce UX/UI</div>
-
-</div>
-
-<div class="hero-card-footer">
-    <span>Stile: pulito, moderno, professionale.</span>
-    <span>Progetti Luxury • Ticino</span>
-</div>                </div>
+                    <div class="hero-card-footer">
+                        <span>Stile: pulito, moderno, professionale.</span>
+                        <span>Progetti Luxury • Ticino</span>
+                    </div>
+                </div>
                 <div class="hero-ornament"></div>
             </div>
         </section>
 
-<!-- ABOUT -->
-<section id="about">
-    <div class="section-header">
-        <div class="section-kicker">Chi sono</div>
-        <h2 class="section-title">Un creativo che unisce grafica, web e strategia.</h2>
-        <p class="section-subtitle">
-            Lavoro sulla comunicazione visiva di brand e attività che vogliono un’immagine pulita, coerente e professionale, online e offline.
-        </p>
-    </div>
+        <section id="about">
+            <div class="section-header">
+                <div class="section-kicker">Chi sono</div>
+                <h2 class="section-title">Un creativo che unisce grafica, web e strategia.</h2>
+                <p class="section-subtitle">
+                    Lavoro sulla comunicazione visiva di brand e attività che vogliono un’immagine pulita, coerente e professionale, online e offline.
+                </p>
+            </div>
 
-    <div class="about-grid">
-        <div class="about-text">
-            <p>
-                Sono Alessio Costantini, grafico e <strong>operatore grafico informatico diplomato</strong> con valutazione
-                <strong>29/30</strong>. Da anni mi occupo di identità visiva, pubblicità e web design, aiutando attività locali,
-                professionisti e piccoli brand a presentarsi in modo chiaro, ordinato e credibile.
-            </p>
-            <br>
-            <p>
-                La mia esperienza nasce dalla pratica: ho progettato loghi, layout, materiali promozionali, landing page,
-                siti vetrina e documenti professionali per corsi, eventi e piattaforme digitali. Ogni progetto è pensato
-                per essere bello da vedere ma soprattutto funzionale, leggibile e facile da usare per chi lo guarda.
-            </p>
-            <br>
-            <p>
-                Quando lavoro su un brand parto sempre dagli obiettivi: cosa vuoi comunicare, a chi ti rivolgi e che impressione
-                vuoi lasciare. Da lì costruisco un sistema visivo coerente – colori, tipografia, griglie, immagini e tono grafico –
-                che si possa applicare in modo uniforme su logo, sito web, social, brochure, slide e materiali stampati.
-            </p>
-            <br>
-            <p>
-                Il mio focus è togliere confusione e dare struttura: meno caos grafico, più chiarezza. Preferisco progetti seguiti
-                con attenzione, in cui posso curare i dettagli e creare un’immagine che duri nel tempo e che ti rappresenti davvero.
-            </p>
-        </div>
-<div class="about-side">
-    <div>Ambiti principali:</div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Sono Alessio Costantini, grafico e <strong>operatore grafico informatico diplomato</strong> con valutazione
+                        <strong>29/30</strong>. Da anni mi occupo di identità visiva, pubblicità e web design, aiutando attività locali,
+                        professionisti e piccoli brand a presentarsi in modo chiaro, ordinato e credibile.
+                    </p>
+                    <br>
+                    <p>
+                        La mia esperienza nasce dalla pratica: ho progettato loghi, layout, materiali promozionali, landing page,
+                        siti vetrina e documenti professionali per corsi, eventi e piattaforme digitali. Ogni progetto è pensato
+                        per essere bello da vedere ma soprattutto funzionale, leggibile e facile da usare per chi lo guarda.
+                    </p>
+                    <br>
+                    <p>
+                        Quando lavoro su un brand parto sempre dagli obiettivi: cosa vuoi comunicare, a chi ti rivolgi e che impressione
+                        vuoi lasciare. Da lì costruisco un sistema visivo coerente – colori, tipografia, griglie, immagini e tono grafico –
+                        che si possa applicare in modo uniforme su logo, sito web, social, brochure, slide e materiali stampati.
+                    </p>
+                    <br>
+                    <p>
+                        Il mio focus è togliere confusione e dare struttura: meno caos grafico, più chiarezza. Preferisco progetti seguiti
+                        con attenzione, in cui posso curare i dettagli e creare un’immagine che duri nel tempo e che ti rappresenti davvero.
+                    </p>
+                </div>
 
-    <div class="about-list">
+                <div class="about-side">
+                    <div>Ambiti principali:</div>
+                    <div class="about-list">
+                        <div class="tag">Branding e identità visiva</div>
+                        <div class="tag">Logo design e monogrammi</div>
 
-        <div class="tag">Branding e identità visiva</div>
-        <div class="tag">Logo design e monogrammi</div>
+                        <div class="tag">Siti web professionali</div>
+                        <div class="tag">Landing page ad alta conversione</div>
 
-        <div class="tag">Siti web professionali</div>
-        <div class="tag">Landing page ad alta conversione</div>
+                        <div class="tag">Materiali promozionali</div>
+                        <div class="tag">Brochure, PDF e presentazioni</div>
 
-        <div class="tag">Materiali promozionali</div>
-        <div class="tag">Brochure, PDF e presentazioni</div>
+                        <div class="tag">Scuole e corsi professionali</div>
+                        <div class="tag">Manuali e materiali didattici</div>
 
-        <div class="tag">Scuole e corsi professionali</div>
-        <div class="tag">Manuali e materiali didattici</div>
+                        <div class="tag">Piattaforme educative online</div>
+                        <div class="tag">Interfacce e UX/UI</div>
 
-        <div class="tag">Piattaforme educative online</div>
-        <div class="tag">Interfacce e UX/UI</div>
+                        <div class="tag">Brand e attività locali</div>
+                        <div class="tag">Startup digitali e personal brand</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="tag">Brand e attività locali</div>
-        <div class="tag">Startup digitali e personal brand</div>
-
-    </div>
-</div>    </div>
-</section>
-
-        <!-- SERVIZI -->
         <section id="services">
-
             <div class="section-header">
                 <div class="section-kicker">Servizi</div>
                 <h2 class="section-title">Cosa posso creare per la tua attività.</h2>
@@ -1061,7 +917,7 @@
                     <ul class="card-list">
                         <li>Sito da 4–6 pagine, responsive</li>
                         <li>Struttura chiara e leggibile</li>
-                        <li>Form contatti / WhatsApp</li>
+                        <li>SEO base e performance</li>
                     </ul>
                 </div>
 
@@ -1078,13 +934,12 @@
             </div>
         </section>
 
-        <!-- PORTFOLIO -->
         <section id="portfolio">
             <div class="section-header">
                 <div class="section-kicker">Portfolio</div>
-                <h2 class="section-title">Alcuni progetti reali che ho seguito.</h2>
+                <h2 class="section-title">Una selezione di lavori.</h2>
                 <p class="section-subtitle">
-                    Ogni progetto nasce da una storia diversa: un salone, una scuola, una piattaforma digitale o un brand personale.
+                    Qui trovi una vetrina dei miei progetti: brand identity, web design, layout e materiali grafici.
                 </p>
             </div>
 
@@ -1095,85 +950,215 @@
                     <p class="portfolio-text">
                         Logo, identità visiva, sito web, pagine scuola e cosmetica, PDF per corsi e materiali.
                     </p>
-                    <img src="locandina.jpg" width="320" height="223" alt=""/>
+                    <img src="locandina.jpg" width="320" height="223" alt="">
                 </div>
+
                 <div class="portfolio-item">
                     <div class="portfolio-label">UX/UI e Piattaforma</div>
                     <div class="portfolio-title">Bitcoin Master</div>
                     <p class="portfolio-text">
                         Struttura, interfaccia, area utente, pagina admin, chat AI e certificato finale in PDF.
                     </p>
-                    <img src="LOGO-BITCOIN-MASTER-APP-con-sito.png" width="270" height="266" alt=""/>
+                    <img src="LOGO-BITCOIN-MASTER-APP-con-sito.png" width="270" height="266" alt="">
                 </div>
+
                 <div class="portfolio-item">
                     <div class="portfolio-label">Brand e Packaging</div>
                     <div class="portfolio-title">MAC / Fidelis Parfums</div>
                     <p class="portfolio-text">
                         Concept visivo, monogrammi, etichette, packaging e presentazione della linea di fragranze.
                     </p>
-                    <img src="macc.png" width="270" height="268" alt=""/>
+                    <img src="macc.png" width="270" height="268" alt="">
                 </div>
-            </div>
-        </section>
 
-        <!-- CONTATTI -->
-        <section id="contact">
-            <div class="section-header">
-                <div class="section-kicker">Contatti</div>
-                <h2 class="section-title">Parliamo del tuo progetto.</h2>
-            <p class="section-subtitle">
-                    Scrivimi cosa ti serve: un nuovo brand, un sito web, un restyling o semplicemente un consiglio.
-                </p>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <p><strong>Nome:</strong> Alessio Costantini</p>
-                    <p><strong>Email:</strong> alessiocostantini.design@gmail.com</p>
-                    <p><strong>Zona:</strong> Lugano – Paradiso, Ticino</p>
-                    <br>
-                    <p>
-                        Preferisco lavorare in modo chiaro: poche chiacchiere, molte cose pratiche.
-                        Raccontami chi sei, che tipo di attività hai e cosa ti aspetti dal progetto.
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Logo Design</div>
+                    <div class="portfolio-title">Alpine Barber Studio</div>
+                    <p class="portfolio-text">
+                        Monogramma, palette scura e linee guida essenziali per comunicazione social e insegna.
                     </p>
+                    <img src="portfolio-01.webp" width="270" height="268" alt="">
                 </div>
 
-                <div class="contact-form">
-                    <form onsubmit="event.preventDefault(); alert('Qui potrai collegare l’invio del form alla tua mail o a un backend.');">
-                        <div class="form-row">
-                            <div class="field">
-                                <label for="name">Nome e cognome</label>
-                                <input id="name" type="text" placeholder="Es. Marco Rossi">
-                            </div>
-                            <div class="field">
-                                <label for="email">Email</label>
-                                <input id="email" type="email" placeholder="nome@dominio.ch">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label for="project">Tipo di progetto</label>
-                            <input id="project" type="text" placeholder="Es. nuovo sito, logo, rebranding...">
-                        </div>
-                        <div class="field">
-                            <label for="message">Messaggio</label>
-                            <textarea id="message" placeholder="Raccontami in poche righe la tua idea o la situazione attuale."></textarea>
-                        </div>
-                        <div class="contact-submit">
-                            <button type="submit" class="btn-primary">Invia richiesta</button>
-                        </div>
-                    </form>
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Sito Vetrina</div>
+                    <div class="portfolio-title">Lugano Fitness Coach</div>
+                    <p class="portfolio-text">
+                        Landing page con sezioni chiare, testimonianze e struttura pensata per conversione contatti.
+                    </p>
+                    <img src="portfolio-02.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Brand Identity</div>
+                    <div class="portfolio-title">Ristorante Oro Nero</div>
+                    <p class="portfolio-text">
+                        Restyling logo, menù elegante e set grafico per social e promozioni stagionali.
+                    </p>
+                    <img src="portfolio-03.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Packaging</div>
+                    <div class="portfolio-title">Candles Atelier</div>
+                    <p class="portfolio-text">
+                        Etichette minimal, mockup prodotto e linea grafica coordinata per e-commerce.
+                    </p>
+                    <img src="portfolio-04.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Brochure</div>
+                    <div class="portfolio-title">Scuola Professionale</div>
+                    <p class="portfolio-text">
+                        Brochure informativa, impaginazione pulita e gerarchia tipografica per lettura veloce.
+                    </p>
+                    <img src="portfolio-05.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Poster & ADV</div>
+                    <div class="portfolio-title">Evento Night Luxury</div>
+                    <p class="portfolio-text">
+                        Locandine, formato stampa e social, concept nero-oro con impatto e leggibilità.
+                    </p>
+                    <img src="portfolio-06.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">E-commerce UI</div>
+                    <div class="portfolio-title">Boutique Pet Luxury</div>
+                    <p class="portfolio-text">
+                        Interfaccia shop: griglie prodotto, pagina dettaglio e carrello con stile premium.
+                    </p>
+                    <img src="portfolio-07.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Logo & Social</div>
+                    <div class="portfolio-title">Studio Nails Milano</div>
+                    <p class="portfolio-text">
+                        Logo elegante, template stories e feed coordinato per comunicazione costante.
+                    </p>
+                    <img src="portfolio-08.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Landing Page</div>
+                    <div class="portfolio-title">Corso Online Pro</div>
+                    <p class="portfolio-text">
+                        Struttura modulare, sezioni benefit, CTA e design orientato alla conversione.
+                    </p>
+                    <img src="portfolio-09.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Branding</div>
+                    <div class="portfolio-title">Swiss Cleaning Service</div>
+                    <p class="portfolio-text">
+                        Identità semplice ma autorevole: logo, colori, biglietti e visual per furgone.
+                    </p>
+                    <img src="portfolio-10.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Editorial</div>
+                    <div class="portfolio-title">Magazine Layout</div>
+                    <p class="portfolio-text">
+                        Griglie, impaginazione, tipografia e sistema di titoli per rivista locale.
+                    </p>
+                    <img src="portfolio-11.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Brand & Menu</div>
+                    <div class="portfolio-title">Caffè Paradiso</div>
+                    <p class="portfolio-text">
+                        Menù premium, cartellonistica e identità coordinata per locale fronte lago.
+                    </p>
+                    <img src="portfolio-12.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">UI Kit</div>
+                    <div class="portfolio-title">Dashboard Admin</div>
+                    <p class="portfolio-text">
+                        Design UI per gestione dati: cards, tabelle, layout e gerarchie pulite.
+                    </p>
+                    <img src="portfolio-13.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Brand Identity</div>
+                    <div class="portfolio-title">Studio Legale</div>
+                    <p class="portfolio-text">
+                        Logo istituzionale, palette sobria e layout documenti per comunicazione seria.
+                    </p>
+                    <img src="portfolio-14.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Social Ads</div>
+                    <div class="portfolio-title">Campagna Black & Gold</div>
+                    <p class="portfolio-text">
+                        Set ADV: varianti, gerarchie testo e visual coerenti per promozione servizi.
+                    </p>
+                    <img src="portfolio-15.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Brand & Print</div>
+                    <div class="portfolio-title">Cartoleria Chic</div>
+                    <p class="portfolio-text">
+                        Biglietti, packaging e layout vetrina con stile elegante e pulito.
+                    </p>
+                    <img src="portfolio-16.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Web Design</div>
+                    <div class="portfolio-title">Portfolio Fotografo</div>
+                    <p class="portfolio-text">
+                        Griglia immagini, hero minimal e pagine progetto con look raffinato.
+                    </p>
+                    <img src="portfolio-17.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Brand Identity</div>
+                    <div class="portfolio-title">Clinica Estetica</div>
+                    <p class="portfolio-text">
+                        Sistema visivo premium, template social e brochure trattamenti.
+                    </p>
+                    <img src="portfolio-18.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Presentazione</div>
+                    <div class="portfolio-title">Pitch Deck Startup</div>
+                    <p class="portfolio-text">
+                        Slide pulite, tipografia forte e struttura narrativa per investitori.
+                    </p>
+                    <img src="portfolio-19.webp" width="270" height="268" alt="">
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-label">Rebranding</div>
+                    <div class="portfolio-title">Studio Wellness</div>
+                    <p class="portfolio-text">
+                        Restyling logo, palette calda e materiali coordinati per comunicazione uniforme.
+                    </p>
+                    <img src="portfolio-20.webp" width="270" height="268" alt="">
                 </div>
             </div>
         </section>
 
-        <!-- FOOTER -->
         <footer>
             <span>© <strong>Alessio Costantini</strong> – Brand and Web Design · Ticino 2025&copy;</span>
         </footer>
     </main>
 
     <script>
-        // Toggle menu mobile
         const navToggle = document.getElementById('navToggle');
         const navLinks = document.getElementById('navLinks');
 
@@ -1181,38 +1166,32 @@
             navLinks.classList.toggle('open');
         });
 
-        // Chiudi il menu quando clicchi un link
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('open');
             });
         });
 
-        // ✨ Scia di stelle dorate che segue il cursore
         let lastStarTime = 0;
         document.addEventListener('mousemove', (e) => {
             const now = performance.now();
-            // Limita la quantità di stelle per non esplodere il DOM
             if (now - lastStarTime < 30) return;
             lastStarTime = now;
 
             const star = document.createElement('div');
             star.className = 'star';
 
-            // Posizione vicino al cursore
             const offsetX = (Math.random() - 0.5) * 16;
             const offsetY = (Math.random() - 0.5) * 16;
             star.style.left = (e.clientX + offsetX) + 'px';
             star.style.top = (e.clientY + offsetY) + 'px';
 
-            // Leggera variazione nella dimensione
             const size = 6 + Math.random() * 6;
             star.style.width = size + 'px';
             star.style.height = size + 'px';
 
             document.body.appendChild(star);
 
-            // Rimuovi l’elemento dopo l’animazione
             setTimeout(() => {
                 star.remove();
             }, 700);
@@ -1220,6 +1199,3 @@
     </script>
 </body>
 </html>
-
-
-
